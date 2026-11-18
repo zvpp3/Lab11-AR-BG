@@ -1,3 +1,7 @@
+# https://github.com/zvpp3/Lab11-AR-BG
+# Partner 1: Avery Roelofsen
+# Partner 2: Braydin Gadouas
+
 import math
 
 def square_root(a):
@@ -11,13 +15,13 @@ def hypotenuse(a, b):
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def div(a, b):
+def divide(a, b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     return b / a
@@ -27,7 +31,7 @@ def logarithm(a, b):
         raise ValueError("Invalid logarithm")
     return math.log(b, a)
 
-def exp(a, b):
+def exponentiate(a, b):
     return a ** b
     
 def exponent(a, b):

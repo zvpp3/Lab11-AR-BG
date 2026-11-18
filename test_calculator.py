@@ -1,3 +1,7 @@
+# https://github.com/zvpp3/Lab11-AR-BG
+# Partner 1: Avery Roelofsen
+# Partner 2: Braydin Gadouas
+
 import unittest
 from calculator import *
 
