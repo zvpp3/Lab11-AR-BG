@@ -6,10 +6,18 @@ import unittest
 from calculator import *
 
 class TestCalculator(unittest.TestCase):
+    ######## Partner 2
+    def test_add(self): # 3 assertions
+        self.assertEqual(add(2,3), 5)
+        self.assertEqual(add(3,4), 7)
+        self.assertEqual(add(4,5), 9)
 
-    ######### Partner 2
-    # Leave your partner's tests here
+    def test_subtract(self): # 3 assertions
+        self.assertEqual(sub(2,3), -1)
+        self.assertEqual(sub(4,3), 1)
+        self.assertEqual(sub(4,1), 3)
 
+    ##########################
 
     ######### Partner 1
     def test_multiply(self):
@@ -22,12 +30,21 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(divide(4, 20), 5)
         self.assertEqual(divide(5, 15), 3)
 
+    ######## Partner 2
+    def test_divide_by_zero(self): # 1 assertion
+        with self.assertRaises(ZeroDivisionError):
+            div(0,5)
 
-    ######### Partner 2
-    # Leave your partner's tests here
+    def test_logarithm(self): # 3 assertions
+        self.assertEqual(logarithm(10,10), 1)
+        self.assertEqual(logarithm(10,100), 2)
+        self.assertEqual(logarithm(2,8), 3)
+        
 
-
-    ######### Partner 1
+    def test_log_invalid_base(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(0,10)
+        
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             logarithm(2, -5)
